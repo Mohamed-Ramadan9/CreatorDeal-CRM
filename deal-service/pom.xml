@@ -8,7 +8,7 @@
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-	<groupId>com.deal-service</groupId>
+	<groupId>com.creatordeal</groupId>
 	<artifactId>deal-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
@@ -52,17 +52,29 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-spring-boot3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
         <dependency>
@@ -77,6 +89,30 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>com/creatordeal/dealservice/DealServiceApplication.java</include>
+                        <include>com/creatordeal/dealservice/controller/DealController.java</include>
+                        <include>com/creatordeal/dealservice/controller/DeliverableController.java</include>
+                        <include>com/creatordeal/dealservice/dto/*Deal*.java</include>
+                        <include>com/creatordeal/dealservice/dto/*Deliverable*.java</include>
+                        <include>com/creatordeal/dealservice/entity/Deal.java</include>
+                        <include>com/creatordeal/dealservice/entity/DealDeliverable.java</include>
+                        <include>com/creatordeal/dealservice/enums/DealStatus.java</include>
+                        <include>com/creatordeal/dealservice/enums/Deliverable*.java</include>
+                        <include>com/creatordeal/dealservice/event/*.java</include>
+                        <include>com/creatordeal/dealservice/exception/*.java</include>
+                        <include>com/creatordeal/dealservice/mapper/DealMapper.java</include>
+                        <include>com/creatordeal/dealservice/mapper/DeliverableMapper.java</include>
+                        <include>com/creatordeal/dealservice/repository/Deal*.java</include>
+                        <include>com/creatordeal/dealservice/service/DealService*.java</include>
+                        <include>com/creatordeal/dealservice/service/DeliverableService*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 

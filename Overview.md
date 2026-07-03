@@ -6,20 +6,20 @@ CreatorDeal CRM is a SaaS platform designed for micro-influencers and content cr
 
 Many creators currently manage sponsorships using:
 
-* Instagram DMs
-* Gmail
-* WhatsApp
-* Notes applications
-* Excel sheets
-* Notion
+- Instagram DMs
+- Gmail
+- WhatsApp
+- Notes applications
+- Excel sheets
+- Notion
 
 As creators grow, this process becomes difficult to manage and often leads to:
 
-* Missed deadlines
-* Lost contracts
-* Forgotten invoices
-* Late payments
-* Poor organization
+- Missed deadlines
+- Lost contracts
+- Forgotten invoices
+- Late payments
+- Poor organization
 
 CreatorDeal CRM aims to solve these problems through a centralized platform.
 
@@ -29,11 +29,11 @@ CreatorDeal CRM aims to solve these problems through a centralized platform.
 
 ## Target Customers
 
-* Micro Influencers (5K - 100K followers)
-* Content Creators
-* Freelance Creators
-* Influencer Managers
-* Small Talent Agencies
+- Micro Influencers (5K - 100K followers)
+- Content Creators
+- Freelance Creators
+- Influencer Managers
+- Small Talent Agencies
 
 ---
 
@@ -43,10 +43,10 @@ CreatorDeal CRM aims to solve these problems through a centralized platform.
 
 Creators need a way to track:
 
-* New opportunities
-* Negotiations
-* Active campaigns
-* Completed campaigns
+- New opportunities
+- Negotiations
+- Active campaigns
+- Completed campaigns
 
 ---
 
@@ -54,17 +54,17 @@ Creators need a way to track:
 
 Creators often have obligations such as:
 
-* Instagram Posts
-* Instagram Stories
-* Reels
-* TikTok Videos
-* YouTube Videos
+- Instagram Posts
+- Instagram Stories
+- Reels
+- TikTok Videos
+- YouTube Videos
 
 The platform tracks:
 
-* Due dates
-* Approval status
-* Publication status
+- Due dates
+- Approval status
+- Publication status
 
 ---
 
@@ -72,10 +72,10 @@ The platform tracks:
 
 Creators need to know:
 
-* Which invoices were sent
-* Which invoices are overdue
-* Which brands have paid
-* Which brands still owe money
+- Which invoices were sent
+- Which invoices are overdue
+- Which brands have paid
+- Which brands still owe money
 
 ---
 
@@ -83,10 +83,10 @@ Creators need to know:
 
 Automatic reminders for:
 
-* Upcoming deliverables
-* Campaign deadlines
-* Invoice due dates
-* Payment follow-ups
+- Upcoming deliverables
+- Campaign deadlines
+- Invoice due dates
+- Payment follow-ups
 
 ---
 
@@ -98,10 +98,10 @@ The platform will later include AI capabilities:
 
 Upload a contract and automatically extract:
 
-* Payment amount
-* Deliverables
-* Deadlines
-* Exclusivity clauses
+- Payment amount
+- Deliverables
+- Deadlines
+- Exclusivity clauses
 
 #### Deal Assistant
 
@@ -111,9 +111,9 @@ AI helps creators plan campaigns and deliverables.
 
 Generate:
 
-* Payment follow-ups
-* Negotiation emails
-* Brand outreach messages
+- Payment follow-ups
+- Negotiation emails
+- Brand outreach messages
 
 ---
 
@@ -135,9 +135,9 @@ The implementation follows concepts from the EasyBytes Spring Boot Microservices
 
 Responsibilities:
 
-* Centralized configuration
-* Environment-specific properties
-* Externalized configuration management
+- Centralized configuration
+- Environment-specific properties
+- Externalized configuration management
 
 ---
 
@@ -145,8 +145,8 @@ Responsibilities:
 
 Responsibilities:
 
-* Service registration
-* Service discovery
+- Service registration
+- Service discovery
 
 ---
 
@@ -154,11 +154,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Routing
-* Authentication
-* Rate limiting
-* Logging
-* Cross-cutting concerns
+- Routing
+- Authentication
+- Rate limiting
+- Logging
+- Cross-cutting concerns
 
 ---
 
@@ -168,11 +168,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Authentication
-* Authorization
-* JWT tokens
-* OAuth2
-* OpenID Connect
+- Authentication
+- Authorization
+- JWT tokens
+- OAuth2
+- OpenID Connect
 
 ---
 
@@ -180,9 +180,9 @@ Responsibilities:
 
 Responsibilities:
 
-* Creator profiles
-* Social accounts
-* Creator settings
+- Creator profiles
+- Social accounts
+- Creator settings
 
 ---
 
@@ -190,9 +190,9 @@ Responsibilities:
 
 Responsibilities:
 
-* Brand management
-* Contact information
-* Brand history
+- Brand management
+- Contact information
+- Brand history
 
 ---
 
@@ -200,9 +200,9 @@ Responsibilities:
 
 Responsibilities:
 
-* Sponsorship deals
-* Deal lifecycle
-* Campaign tracking
+- Sponsorship deals
+- Deal lifecycle
+- Campaign tracking
 
 ---
 
@@ -210,8 +210,8 @@ Responsibilities:
 
 Responsibilities:
 
-* Invoice management
-* Payment tracking
+- Invoice management
+- Payment tracking
 
 ---
 
@@ -219,9 +219,9 @@ Responsibilities:
 
 Responsibilities:
 
-* Email notifications
-* Reminder scheduling
-* Future push notifications
+- Email notifications
+- Reminder scheduling
+- Future push notifications
 
 ---
 
@@ -229,9 +229,9 @@ Responsibilities:
 
 Responsibilities:
 
-* Contract analysis
-* Content generation
-* Deal insights
+- Contract analysis
+- Content generation
+- Deal insights
 
 ---
 
@@ -239,9 +239,9 @@ Responsibilities:
 
 Future communication between services will use:
 
-* RabbitMQ
-* Kafka
-* Spring Cloud Stream
+- RabbitMQ
+- Kafka
+- Spring Cloud Stream
 
 Example:
 
@@ -257,18 +257,18 @@ Deal Created
 
 The project will implement:
 
-* Prometheus
-* Grafana
-* Loki
-* Promtail
-* Tempo
+- Prometheus
+- Grafana
+- Loki
+- Promtail
+- Tempo
 
 Monitoring includes:
 
-* Request metrics
-* Error rates
-* Service health
-* Distributed tracing
+- Request metrics
+- Error rates
+- Service health
+- Distributed tracing
 
 ---
 
@@ -276,14 +276,14 @@ Monitoring includes:
 
 The platform will use:
 
-* Spring Security
-* OAuth2
-* OpenID Connect
-* JWT Authentication
+- Spring Security
+- OAuth2
+- OpenID Connect
+- JWT Authentication
 
 Future plan:
 
-* Keycloak integration
+- Keycloak integration
 
 ---
 
@@ -309,9 +309,9 @@ Represents required content.
 
 Examples:
 
-* Reel
-* Story
-* TikTok Video
+- Reel
+- Story
+- TikTok Video
 
 ## Invoice
 
@@ -329,82 +329,82 @@ Represents scheduled notifications.
 
 ### Project Setup
 
-* Spring Boot project created
-* PostgreSQL database designed
-* Layered architecture established
+- Spring Boot project created
+- PostgreSQL database designed
+- Layered architecture established
 
 ### Domain Entities
 
 Implemented:
 
-* Creator
-* Brand
-* Deal
-* DealDeliverable
-* Invoice
-* Reminder
+- Creator
+- Brand
+- Deal
+- DealDeliverable
+- Invoice
+- Reminder
 
 ### Enums
 
 Implemented:
 
-* DealStatus
-* DeliverableStatus
-* DeliverableType
-* InvoiceStatus
-* ReminderStatus
-* ReminderType
+- DealStatus
+- DeliverableStatus
+- DeliverableType
+- InvoiceStatus
+- ReminderStatus
+- ReminderType
 
 ### Repositories
 
 Implemented repositories for:
 
-* Creator
-* Brand
-* Deal
-* Deliverable
-* Invoice
-* Reminder
+- Creator
+- Brand
+- Deal
+- Deliverable
+- Invoice
+- Reminder
 
 ### DTO Layer
 
 Implemented DTOs for:
 
-* Creator
-* Brand
-* Deal
+- Creator
+- Brand
+- Deal
 
 ### Mapper Layer
 
 Implemented:
 
-* CreatorMapper
-* BrandMapper
-* DealMapper
+- CreatorMapper
+- BrandMapper
+- DealMapper
 
 ### Services
 
 Implemented:
 
-* CreatorService
-* BrandService
-* DealService
+- CreatorService
+- BrandService
+- DealService
 
 ### Controllers
 
 Implemented:
 
-* CreatorController
-* BrandController
-* DealController
+- CreatorController
+- BrandController
+- DealController
 
 ### Exception Handling
 
 Implemented:
 
-* ResourceNotFoundException
-* DuplicateResourceException
-* GlobalExceptionHandler
+- ResourceNotFoundException
+- DuplicateResourceException
+- GlobalExceptionHandler
 
 ---
 
@@ -416,9 +416,9 @@ Implemented:
 
 Build:
 
-* Deliverable CRUD
-* Deliverable status updates
-* Deliverable tracking
+- Deliverable CRUD
+- Deliverable status updates
+- Deliverable tracking
 
 ---
 
@@ -426,9 +426,9 @@ Build:
 
 Build:
 
-* Invoice CRUD
-* Payment status updates
-* Invoice reports
+- Invoice CRUD
+- Payment status updates
+- Invoice reports
 
 ---
 
@@ -436,8 +436,8 @@ Build:
 
 Build:
 
-* Scheduled reminders
-* Email integration
+- Scheduled reminders
+- Email integration
 
 ---
 
@@ -487,10 +487,10 @@ Identity management integration.
 
 Implement:
 
-* Prometheus
-* Grafana
-* Loki
-* Tempo
+- Prometheus
+- Grafana
+- Loki
+- Tempo
 
 ---
 
@@ -500,9 +500,9 @@ Implement:
 
 Implement:
 
-* Contract Analyzer
-* Deal Assistant
-* Email Generator
+- Contract Analyzer
+- Deal Assistant
+- Email Generator
 
 ---
 
@@ -510,15 +510,15 @@ Implement:
 
 Build a production-ready SaaS platform while learning:
 
-* Spring Boot
-* Spring Cloud
-* Microservices
-* Event-Driven Architecture
-* Distributed Systems
-* OAuth2
-* Observability
-* AI Integration
-* SaaS Design
+- Spring Boot
+- Spring Cloud
+- Microservices
+- Event-Driven Architecture
+- Distributed Systems
+- OAuth2
+- Observability
+- AI Integration
+- SaaS Design
 
 The final project should demonstrate enterprise-grade architecture and serve as a complete portfolio project.
 

@@ -1,0 +1,81 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: deal-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/deal_db
+    username: postgres
+    password: MidoRamadan911
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  cloud:
+    stream:
+      bindings:
+        dealCreated-out-0:
+          destination: deal-created
+        deliverableCreated-out-0:
+          destination: deliverable-created
+      rabbit:
+        binder:
+          brokers: localhost
+          defaultBrokerPort: 5672
+      openfeign:
+        circuitbreaker:
+          enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+services:
+  creator-service:
+    url: http://localhost:8081
+  brand-service:
+    url: http://localhost:8082
+
+
+resilience4j:
+  retry:
+    instances:
+      creatorServiceRetry:
+        max-attempts: 3
+        wait-duration: 500ms
+      brandServiceRetry:
+        max-attempts: 3
+        wait-duration: 500ms
+
+  circuitbreaker:
+    instances:
+      creatorServiceCircuitBreaker:
+        sliding-window-size: 5
+        minimum-number-of-calls: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 2
+
+      brandServiceCircuitBreaker:
+        sliding-window-size: 5
+        minimum-number-of-calls: 5
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
+        permitted-number-of-calls-in-half-open-state: 2
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: ture
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8070/eureka/
