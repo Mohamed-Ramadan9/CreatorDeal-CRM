@@ -1,53 +1,7 @@
-server:
-  port: 8085
 
 spring:
   application:
     name: notification-service
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/notification_db
-    username: postgres
-    password: MidoRamadan911
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-
-  cloud:
-    function:
-      definition: dealCreated;deliverableCreated;invoiceCreated
-    stream:
-      bindings:
-        dealCreated-in-0:
-          destination: deal-created
-          group: notification-service
-        deliverableCreated-in-0:
-          destination: deliverable-created
-          group: notification-service
-        invoiceCreated-in-0:
-          destination: invoice-created
-          group: notification-service
-      rabbit:
-        binder:
-          brokers: localhost
-          defaultBrokerPort: 5672
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8070/eureka/
+  config:
+    import: configserver:http://localhost:8071

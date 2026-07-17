@@ -5,14 +5,16 @@ spring:
   application:
     name: config-server
 
-  profiles:
-    active: native
-
   cloud:
     config:
       server:
-        native:
-          search-locations: file:///H:/creator-deal-saas/config-repo
+        git:
+          uri: ${CONFIG_GIT_URI}
+          username: ${CONFIG_GIT_USERNAME}
+          password: ${CONFIG_GIT_TOKEN}
+          default-label: main
+          clone-on-start: true
+          force-pull: true
 
 eureka:
   instance:
@@ -22,7 +24,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8070/eureka/
+      defaultZone: ${EUREKA_URL:http://localhost:8070/eureka/}
 
 management:
   endpoints:

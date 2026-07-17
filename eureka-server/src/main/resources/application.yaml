@@ -5,20 +5,18 @@ spring:
   application:
     name: eureka-server
 
-
-eureka :
-  instance :
+eureka:
+  instance:
     hostname: localhost
 
-  client :
-    register-with-eureka : false
+  client:
+    register-with-eureka: false
     fetch-registry: false
     service-url:
       defaultZone: http://localhost:8070/eureka/
 
-
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: health,info
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

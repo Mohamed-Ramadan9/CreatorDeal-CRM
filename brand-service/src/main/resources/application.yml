@@ -1,35 +1,7 @@
-server:
-  port: 8082
 
 spring:
   application:
     name: brand-service
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/brand_db
-    username: postgres
-    password: MidoRamadan911
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-eureka:
-  instance:
-    prefer-ip-address: true
-
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8070/eureka/
+  config:
+    import: configserver:http://localhost:8071
