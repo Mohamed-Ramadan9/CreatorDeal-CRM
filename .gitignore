@@ -1,0 +1,54 @@
+# Build output
+**/target/
+**/build/
+**/out/
+*.class
+*.jar
+*.war
+
+# IDE and editor settings
+.idea/
+**/.idea/
+.vscode/
+**/.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+.sts4-cache/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+application-local.yml
+application-local.yaml
+application-local.properties
+*.pem
+*.key
+*.p12
+*.jks
+
+# Runtime output
+*.log
+logs/
+tmp/
+temp/
+*.pid
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Tool and generated caches
+.agents/
+config-server-cache/
+
+# Local project notes
+idea.md
